@@ -1,0 +1,169 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --very-dark-blue-main-bg: hsl(217, 54%, 11%);
+  --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --general-size: 18px;
+  --outfit: 'Outfit', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--outfit);
+  min-height: 100vh;
+  /* padding: 5rem; */
+  color: white;
+  background-color: var(--very-dark-blue-main-bg);
+}
+
+main {
+  width: 20rem;
+  background-color: var(--very-dark-blue-card-bg);
+  padding: 1.2rem;
+  border-radius: 15px;
+}
+
+.main-img-container {
+  position: relative;
+}
+
+.main-img-container:hover::before {
+  content: '';
+  position: absolute;
+  background-image: url(images/icon-view.svg);
+  background-repeat: no-repeat;
+  background-size: 2.5rem;
+  background-position: center;
+}
+
+.main-img-container:hover::before {
+  content: '';
+  position: absolute;
+  background-color: rgba(0, 255, 255, 0.438);
+  left: 0;
+  right: 0;
+  bottom: 24px;
+  top: 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.main-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 1.2rem;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: var(--soft-blue);
+}
+
+.eth-amount::before {
+  content: '';
+  background-image: url(/images/icon-ethereum.svg);
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1rem;
+  height: 1rem;
+  left: -1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--cyan);
+}
+
+.eth-container {
+  position: relative;
+}
+.eth-container::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px; /* Adjust the bottom position as needed */
+  height: 1px; /* Adjust the height as needed */
+  background-color: var(--soft-blue);
+}
+.eth-amount {
+  position: relative;
+  margin-left: 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--cyan);
+}
+
+.time-left::before {
+  content: '';
+  background-image: url(/images/icon-clock.svg);
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1rem;
+  height: 1rem;
+  left: -1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--cyan);
+}
+
+.time-left {
+  position: relative;
+  margin-left: 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--soft-blue);
+  font-weight: 300;
+}
+
+.avatar {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+}
+
+.creator-name {
+  margin: 0;
+  margin-left: 0.8rem;
+  font-size: 0.8rem;
+}
+
+.creator-name span {
+  font-size: 0.8rem;
+  color: var(--soft-blue);
+}
+
+/* Footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
+
+/* Media Queries */
+
+/* Extra Small Devices (Phones) */
+
+@media (max-width: 320px) {
+  main {
+    width: 90%;
+  }
+
+  body {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
